@@ -1,0 +1,7 @@
+<mat-toolbar color="primary" class="search-toolbar">
+  <mat-form-field>
+    <input #filmName type="text" matInput/>
+
+  </mat-form-field>
+  <button style="margin: 10px" mat-raised-button [routerLink]="['/movieList', filmName.value]">Search</button>
+</mat-toolbar>

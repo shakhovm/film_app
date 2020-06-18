@@ -1,0 +1,26 @@
+.no-found {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.films-content, .no-found {
+  margin: 70px;
+}
+
+.film-block {
+  border-bottom: rgba(5,6,1,0.44) solid;
+  padding-bottom: 20px;
+}
+
+.film-block p {
+  font-size: 30px;
+}
+
+.film-block img {
+  border: white solid;
+}
+
+.film-block img:hover {
+  border-color: blue;
+  cursor: pointer;
+}

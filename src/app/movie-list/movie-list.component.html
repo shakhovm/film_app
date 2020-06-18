@@ -1,0 +1,11 @@
+<div class="no-found" *ngIf="results.length === 0">
+  No Films Found
+</div>
+<div *ngFor="let result of results" class="films-content">
+  <div class="film-block">
+    <p>{{result.Title}} ({{result.Year}})</p>
+
+    <img [src]="result.Poster" [routerLink]="['/movieInfo', result.imdbID]" alt="" width="300px" height="444px">
+    <app-favourites-btn [film]="result"></app-favourites-btn>
+  </div>
+</div>

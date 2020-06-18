@@ -1,0 +1,9 @@
+.search-toolbar {
+  text-align: center;
+  position: fixed;
+}
+
+.search-toolbar mat-form-field {
+  width: 30%;
+  margin-left: 25%;
+}

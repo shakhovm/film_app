@@ -1,0 +1,13 @@
+<div class="film-block">
+  <img [src]="film.Poster" alt="" width="300px" height="444px">
+  <p>{{film.Title}} ({{film.Year}})</p>
+  <div class="film-plot">{{ film.Plot}}</div>
+  <div class="additional-info">
+    <div><strong>Genre: </strong>{{ film.Genre }}</div>
+    <div><strong>Released: </strong>{{ film.Released }}</div>
+    <div><strong>Director: </strong>{{ film.Director }}</div>
+    <div><strong>Actors: </strong>{{ film.Actors }}</div>
+  </div>
+  <app-favourites-btn [film]="film"></app-favourites-btn>
+
+</div>

@@ -1,0 +1,29 @@
+.film-block {
+  margin: 70px;
+}
+
+.film-block p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.film-block img {
+  float: left;
+  padding: 10px;
+}
+
+.film-plot {
+  font-size: 15px;
+
+}
+
+.additional-info {
+  clear: left;
+  margin-left: 10px;
+}
+
+.film-block app-favourites-btn {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}

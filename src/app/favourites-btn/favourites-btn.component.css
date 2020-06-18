@@ -1,0 +1,13 @@
+.add-to-list {
+  background-color: greenyellow;
+}
+
+.remove-from-list {
+  background-color: red;
+}
+
+.add-to-list, .remove-from-list {
+  float: right;
+  position: static;
+  transform: none;
+}
