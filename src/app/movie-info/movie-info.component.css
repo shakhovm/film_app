@@ -5,6 +5,7 @@
 .film-block p {
   font-size: 20px;
   font-weight: bold;
+  padding: 10px;
 }
 
 .film-block img {
@@ -14,7 +15,7 @@
 
 .film-plot {
   font-size: 15px;
-
+  padding: 10px;
 }
 
 .additional-info {
@@ -26,4 +27,17 @@
   float: left;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .film-block {
+    margin: 0;
+  }
+
+  .films-content {
+    margin: auto;
+    margin-top: 70px;
+  }
+
 }

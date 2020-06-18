@@ -11,3 +11,13 @@
   position: static;
   transform: none;
 }
+
+@media (max-width: 768px) {
+  .add-to-list, .remove-from-list {
+    float: none;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+  }
+
+}

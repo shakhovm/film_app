@@ -15,10 +15,8 @@ export class MyFavouritesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const keys = Object.keys(localStorage);
-    keys.forEach(
-      key => this.films.push(JSON.parse(localStorage.getItem(key)))
-    );
+    this.films = JSON.parse(localStorage.getItem('films'));
+    console.log(localStorage.getItem('films'));
   }
 
 }

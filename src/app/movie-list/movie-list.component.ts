@@ -20,7 +20,9 @@ export interface ImdbFilm {
 export class MovieListComponent implements OnInit {
 
   results: ImdbFilm[] = [];
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {
+
+  }
   ngOnInit(): void {
     this.route.params.subscribe(routeParams => {
       const filmName = routeParams.id;
@@ -29,6 +31,8 @@ export class MovieListComponent implements OnInit {
         .then(body => {
           if (body.Response !== 'False') {
             this.results = body.Search;
+          } else {
+            this.results = [];
           }
         })
         .catch(e => {});

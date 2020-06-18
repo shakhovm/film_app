@@ -1,15 +1,10 @@
-<!--<mat-sidenav-container class="sidenav-container">-->
-<!--  <mat-sidenav-content>-->
-<!--    <app-movie-search></app-movie-search>-->
-<!--  </mat-sidenav-content>-->
-
-<!--</mat-sidenav-container>-->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     #drawer
     class="sidenav"
-    mode="side"
-    opened="true"
+    [mode]="breakpointObserver.isMatched('(max-width: 768px)') ? 'over' : 'side'"
+    [opened]="!breakpointObserver.isMatched('(max-width: 768px)')"
+    fixedInViewport="true"
   >
     <mat-toolbar color="primary">
       Menu
@@ -20,8 +15,15 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-movie-search></app-movie-search>
 
+
+    <app-movie-search></app-movie-search>
+    <button (click)="drawer.toggle()"
+            mat-icon-button
+            class="sidenav-button"
+    >
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 

@@ -4,6 +4,7 @@
 }
 
 .films-content, .no-found {
+
   margin: 70px;
 }
 
@@ -24,4 +25,13 @@
 .film-block img:hover {
   border-color: blue;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .films-content, .no-found {
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+  }
+
 }

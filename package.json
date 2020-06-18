@@ -1,5 +1,5 @@
 {
-  "name": "angular-cli",
+  "name": "film-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,8 +21,10 @@
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "@ngrx/store": "^9.2.0",
     "bootstrap": "^4.5.0",
     "ng": "0.0.0",
+    "ngrx": "0.0.1-security",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

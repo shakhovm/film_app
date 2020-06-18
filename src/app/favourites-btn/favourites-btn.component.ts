@@ -14,22 +14,24 @@ export class FavouritesBtnComponent implements OnInit {
   currentText: string;
   btnStyle: string;
 
-  constructor() { }
+  constructor() {}
 
   onClick(): void {
     this.currentText = this.addedToFavourites ? 'Add To Favourites' : 'Remove From Favourites';
     this.btnStyle = this.addedToFavourites ? 'add-to-list' : 'remove-from-list';
-    if (this.addedToFavourites) {
-      localStorage.removeItem(this.film.imdbID);
+    const films: ImdbFilm[] = JSON.parse(localStorage.getItem('films'));
+    if (!this.addedToFavourites) {
+      films.push(this.film);
     } else {
-      localStorage.setItem(this.film.imdbID, JSON.stringify(this.film));
+      films.splice(films.findIndex(film => this.film.imdbID === film.imdbID), 1);
     }
+    localStorage.setItem('films', JSON.stringify(films));
     this.addedToFavourites = this.addedToFavourites !== true;
   }
 
   ngOnInit(): void {
-    const obj = localStorage.getItem(this.film.imdbID);
-    this.addedToFavourites = obj !== null;
+    const films: ImdbFilm[] = JSON.parse(localStorage.getItem('films'));
+    this.addedToFavourites = films.findIndex(film => film.imdbID === this.film.imdbID) !== -1;
     this.currentText = !this.addedToFavourites ? 'Add To Favourites' : 'Remove From Favourites';
     this.btnStyle = !this.addedToFavourites ? 'add-to-list' : 'remove-from-list';
   }
