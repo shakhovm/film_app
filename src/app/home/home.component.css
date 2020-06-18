@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
+.home {
+  margin: 70px;
+  font-family: 'Piedra', cursive;
+  font-size: 30px;
+}
+
+.home p {
+  width: 341px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+  }
+}
